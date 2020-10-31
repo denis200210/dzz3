@@ -1,30 +1,28 @@
-#include <conio.h>
-#include <locale.h>
+// простая перестановка
 #include <iostream>
-#include <string.h>
-#include <stdio.h>
+
 
 using namespace std;
 
 int main()
 {
 	setlocale(LC_ALL, "rus");
-	std::cout << "\t\t\tПростая Перестановка" << endl;
+
 
 	char s[50];
 	char massiv[100][100];
 	int b, c;
 	int count = 0;
 
-	std::cout << "\nИсходное слово: ";
-	cin >>(s);
+	std::cout << "Исходное слово: ";
+	cin >> (s);
 	int amount = strlen(s);
-	std::cout << "\n\t\t\tКоличество символов: " << amount << endl;
-	std::cout<< "\n\t\t\t" << " Ввести ключ (M x N) " << endl << "\n";
-	std::cout<< "Ввести кол-во строк: ";
+	std::cout << "Количество символов: " << amount << endl;
+	std::cout << "Ввести ключ (M x N) " << endl << "\n";
+	std::cout << "Ввести кол-во строк: ";
 	cin >> b;
 	std::cout << "Ввести кол-во столбцов: ";
-	cin>> c;
+	cin >> c;
 
 	for (int i = 0; i < b; i++)
 	{
@@ -40,9 +38,9 @@ int main()
 	{
 		for (int i = 0; i < b; i++)
 		{
-			std::cout<< massiv[i][j];
+			std::cout << massiv[i][j];
 		}
 	}
-	std::cout<< endl;
+	std::cout << endl;
 
 }
