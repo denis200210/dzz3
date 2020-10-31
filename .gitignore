@@ -1,15 +1,13 @@
-#include <conio.h>
-#include <locale.h>
+// простая перестановка
 #include <iostream>
-#include <string.h>
-#include <stdio.h>
+
 
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "rus");
-    cout << "\tПростая Перестановка" << endl;
+   
 
 
     cout << "\tДешифрование";
@@ -18,18 +16,18 @@ int main()
     char massiv[100][100];
     int count = 0;
 
-    cout << "\nИсходное слово: ";
-    cin>> d;
+    cout << "\nИсходное слово: ";// только англ слова желательно
+    cin >> d;
 
     int amount = strlen(d);
     cout << "\n\tКоличество символов: " << amount << endl;
-    cout << "\n\t" << "  Ввести ключ (M x N) " << endl << "\n";
+    cout << "\n\t" << "  Ввести ключ (M x N) " << endl << "\n"; // зависит от длины слова желательно подобрать так чтобы было например 8 это 2*4 или 7 это тоже 2*4
     cout << "Ввести кол-во строк: ";
     cin >> m;
     cout << "Ввести кол-во столбцов: ";
     cin >> n;
 
-    for (int i = 0; i < n; i++) // в массив вносим
+    for (int i = 0; i < n; i++) // вносим в массив слово 
     {
         for (int j = 0; j < m; j++)
         {
@@ -38,7 +36,7 @@ int main()
         }
     }
 
-    cout << "Дешифрованное слово: ";
+    cout << "Дешифрованное слово: ";// дешифруем слово и выводим его 
     for (int j = 0; j < m; j++)
     {
         for (int i = 0; i < n; i++) //выводим из массива
